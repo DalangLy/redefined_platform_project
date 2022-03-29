@@ -26,6 +26,7 @@ class _LoginFormState extends State<LoginForm> {
               border: OutlineInputBorder(),
               hintText: 'Username',
             ),
+            initialValue: 'bernie.kovacek@example.org',
             validator: (String? value){
               if(value == null || value.isEmpty){
                 return 'please input an email';
@@ -45,6 +46,7 @@ class _LoginFormState extends State<LoginForm> {
               border: OutlineInputBorder(),
               hintText: 'Password',
             ),
+            initialValue: 'password',
             obscureText: true,
             validator: (String? value){
               if(value == null || value.isEmpty){
@@ -75,6 +77,9 @@ class _LoginFormState extends State<LoginForm> {
                   widget.onSubmit({
                     'username': username,
                     'password': password,
+                    'grant_type': 'password',
+                    'client_id': '95e0daa5-3f15-41da-b0e9-ff5bf1b3a95d',
+                    'client_secret': 'BA2sQEy29sAf0iA5CajtaFLkjeiH9TqrUEbW4fsD',
                   });
                 }
               },
